@@ -1,6 +1,14 @@
+import { Box, Typography } from "@mui/material";
+
 const Email = () => {
   return (
-    <div className="flex items-center gap-[5px] p-[10px]">
+    <Box
+      component="div"
+      display="flex"
+      alignItems="center"
+      gap="5px"
+      padding="10px"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -26,10 +34,20 @@ const Email = () => {
         </defs>
       </svg>
 
-      <h6 className="text-lighttextcolor text-sm leading-6 font-bold tracking-[0.2px]">
+      <Typography
+        component="h6"
+        sx={{
+          fontSize: "14px",
+          fontWeight: "600",
+          lineHeight: "24px",
+          letterSpacing: "0.2px",
+          fontStyle: "normal",
+          color: "#FFF",
+        }}
+      >
         michelle.rivera@example.com
-      </h6>
-    </div>
+      </Typography>
+    </Box>
   );
 };
 

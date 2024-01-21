@@ -1,9 +1,27 @@
+import { Box, Typography } from "@mui/material";
+
 const BannerSocials = () => {
   return (
-    <div className="flex items-center gap-[10px] p-[10px]">
-      <h6 className="text-lighttextcolor text-sm leading-6 font-bold tracking-[0.2px]">
+    <Box
+      component="div"
+      display="flex"
+      alignItems="center"
+      gap="10px"
+      padding="10px"
+    >
+      <Typography
+        component="h6"
+        sx={{
+          fontSize: "14px",
+          fontWeight: "600",
+          lineHeight: "24px",
+          letterSpacing: "0.2px",
+          fontStyle: "normal",
+          color: "#FFF",
+        }}
+      >
         Follow Us :
-      </h6>
+      </Typography>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +110,7 @@ const BannerSocials = () => {
           </clipPath>
         </defs>
       </svg>
-    </div>
+    </Box>
   );
 };
 

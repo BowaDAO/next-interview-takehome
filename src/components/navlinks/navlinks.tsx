@@ -1,38 +1,116 @@
+import {
+  ListItem,
+  ListItemButton,
+  List,
+  ListItemText,
+  Box,
+  SvgIcon,
+} from "@mui/material";
+
 const Navlinks = () => {
-  const liClass =
-    "text-sm leading-6 font-bold tracking-[0.2px] text-secondarytextcolor";
-
   return (
-    <ul className="flex items-center gap-[15px]">
-      <li className={`${liClass}`}>Home</li>
+    <List
+      sx={{
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <ListItemButton component="a">
+        <ListItemText
+          primary="Home"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
+      </ListItemButton>
 
-      <span className="flex items-center gap-[10px]">
-        <li className="text-sm font-[500] leading-[28px] tracking-[0.2px] text-black">
-          Shop
-        </li>
+      <ListItemButton
+        component="a"
+        sx={{ display: "flex", alignItems: "center" }}
+      >
+        <ListItemText
+          primary="Shop"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="7"
-          viewBox="0 0 10 7"
-          fill="none"
-        >
-          <path
-            d="M1.42857 0.5L5 4.07143L8.57143 0.5L10 1.21429L5 6.21429L-3.12224e-08 1.21429L1.42857 0.5Z"
-            fill="#252B42"
-          />
-        </svg>
-      </span>
+        <SvgIcon style={{ width: "10px", height: "7px" }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="7"
+            viewBox="0 0 10 7"
+            fill="none"
+          >
+            <path
+              d="M1.42857 0.5L5 4.07143L8.57143 0.5L10 1.21429L5 6.21429L-3.12224e-08 1.21429L1.42857 0.5Z"
+              fill="#252B42"
+            />
+          </svg>
+        </SvgIcon>
+      </ListItemButton>
 
-      <li className={`${liClass}`}>About</li>
+      <ListItemButton component="a">
+        <ListItemText
+          primary="About"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
+      </ListItemButton>
 
-      <li className={`${liClass}`}>Blog</li>
+      <ListItemButton component="a">
+        <ListItemText
+          primary="Blog"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
+      </ListItemButton>
 
-      <li className={`${liClass}`}>Contact</li>
+      <ListItemButton component="a">
+        <ListItemText
+          primary="Contact"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
+      </ListItemButton>
 
-      <li className={`${liClass}`}>Pages</li>
-    </ul>
+      <ListItemButton component="a">
+        <ListItemText
+          primary="Pages"
+          primaryTypographyProps={{
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontWeight: 700,
+            letterSpacing: "0.2px",
+            color: "#737373",
+          }}
+        />
+      </ListItemButton>
+    </List>
   );
 };
 

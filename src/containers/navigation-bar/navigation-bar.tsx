@@ -6,30 +6,53 @@ import {
   CartIcon,
   WishlistIcon,
 } from "@/components";
+import { AppBar, Toolbar, Box, Typography, Stack } from "@mui/material";
 
 const NavigationBar = () => {
   return (
-    <nav className="flex items-center justify-between px-[38px] h-[58px] mt-[15px] w-full">
-      <div className="flex items-center gap-10">
-        <span className="py-[13px] pr-[79px]">
-          <Logo />
-        </span>
+    <AppBar
+      position="static"
+      elevation={0.01}
+      style={{ backgroundColor: "#FFF" }}
+    >
+      <Toolbar
+        sx={{
+          display: "none",
 
-        <Navlinks />
-      </div>
+          "@media (min-width: 1024px)": {
+            alignItems: "center",
+            justifyContent: "space-between",
+            height: "58px",
+            marginY: "15px",
+            display: "flex",
+            paddingX: "38px",
+          },
+        }}
+      >
+        <Box component="div" display="flex" alignItems="center" gap="10px">
+          <Typography
+            component="span"
+            sx={{ paddingY: "13px", paddingRight: "79px" }}
+          >
+            <Logo />
+          </Typography>
 
-      <div className="flex items-center gap-[30px]">
-        <Login />
+          <Navlinks />
+        </Box>
 
-        <span className="flex items-center gap-[15px]">
-          <SearchIcon />
+        <Stack direction="row">
+          <Login />
 
-          <CartIcon />
+          <Stack direction="row">
+            <SearchIcon />
 
-          <WishlistIcon />
-        </span>
-      </div>
-    </nav>
+            <CartIcon />
+
+            <WishlistIcon />
+          </Stack>
+        </Stack>
+      </Toolbar>
+    </AppBar>
   );
 };
 

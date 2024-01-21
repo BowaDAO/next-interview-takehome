@@ -1,11 +1,15 @@
-import { GreenBanner, NavigationBar } from "@/containers";
+import { Box } from "@mui/material";
+
+import { GreenBanner, NavigationBar, Header } from "@/containers";
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <Box>
       <GreenBanner />
 
       <NavigationBar />
-    </main>
+
+      <Header />
+    </Box>
   );
 }

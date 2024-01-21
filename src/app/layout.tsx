@@ -6,6 +6,12 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Provider } from "react-redux";
 import { store } from "@/redux-toolkit/store";
 import { ReactQueryProvider } from "@/components";
+import {
+  StyledEngineProvider,
+  ThemeProvider,
+  CssBaseline,
+} from "@mui/material";
+import theme from "@/material-ui/theme";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -20,7 +26,10 @@ export default function RootLayout({
         <Provider store={store}>
           <ReactQueryProvider>
             <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-              {children}
+              <ThemeProvider theme={theme}>
+                <CssBaseline />
+                {children}
+              </ThemeProvider>
             </AppRouterCacheProvider>
           </ReactQueryProvider>
         </Provider>
@@ -28,3 +37,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+// </ThemeProvider>
+// </StyledEngineProvider>

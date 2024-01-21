@@ -1,22 +1,47 @@
 import { Phone, Email, BannerSocials } from "@/components";
+import { Box, Typography } from "@mui/material";
 
 const GreenBanner = () => {
   return (
-    <div className="h-[58px] px-6 w-full bg-green pt-[9px] pb-[3px] flex items-center justify-between">
-      <span className="flex items-center">
+    <Box
+      component="section"
+      sx={{
+        display: "none",
+
+        "@media (min-width: 1200px)": {
+          display: "flex",
+          height: "58px",
+          paddingX: "24px",
+          bgcolor: "#23856D",
+          alignItems: "center",
+          justifyContent: "space-between",
+        },
+      }}
+    >
+      <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
         <Phone />
 
         <Email />
-      </span>
+      </Box>
 
-      <span className="p-[10px]">
-        <h6 className="text-lighttextcolor text-sm leading-6 font-bold tracking-[0.2px]">
+      <Box component="span" padding={10}>
+        <Typography
+          component="h6"
+          sx={{
+            fontSize: "14px",
+            fontWeight: "600",
+            lineHeight: "24px",
+            letterSpacing: "0.2px",
+            fontStyle: "normal",
+            color: "#FFF",
+          }}
+        >
           Follow Us and get a chance to win 80% off
-        </h6>
-      </span>
+        </Typography>
+      </Box>
 
       <BannerSocials />
-    </div>
+    </Box>
   );
 };
 
