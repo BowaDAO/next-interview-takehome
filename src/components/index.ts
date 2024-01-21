@@ -8,6 +8,8 @@ import Login from "./login/login";
 import CartIcon from "./cart-icon/cart-icon";
 import SearchIcon from "./search-icon/search-icon";
 import WishlistIcon from "./wishlist-icon/wishlist-icon";
+import SectionHeading from "./section-heading/section-heading";
+import ProductCard from "./product-card/product-card";
 
 export {
   ReactQueryProvider,
@@ -20,4 +22,6 @@ export {
   CartIcon,
   SearchIcon,
   WishlistIcon,
+  SectionHeading,
+  ProductCard,
 };

@@ -10,11 +10,7 @@ import { AppBar, Toolbar, Box, Typography, Stack } from "@mui/material";
 
 const NavigationBar = () => {
   return (
-    <AppBar
-      position="static"
-      elevation={0.01}
-      style={{ backgroundColor: "#FFF" }}
-    >
+    <AppBar position="static" elevation={0} style={{ backgroundColor: "#FFF" }}>
       <Toolbar
         sx={{
           display: "none",

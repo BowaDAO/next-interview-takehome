@@ -42,6 +42,8 @@ const Header = () => {
             loading="eager"
             blurDataURL=""
             fill
+            priority
+            sizes="any"
           />
         </Box>
 
@@ -77,6 +79,8 @@ const Header = () => {
               loading="eager"
               blurDataURL=""
               fill
+              priority
+              sizes="any"
             />
           </Box>
 
@@ -115,6 +119,8 @@ const Header = () => {
                 loading="eager"
                 blurDataURL=""
                 fill
+                priority
+                sizes="any"
               />
             </Box>
 
@@ -140,6 +146,8 @@ const Header = () => {
                 loading="eager"
                 blurDataURL=""
                 fill
+                priority
+                sizes="any"
               />
             </Box>
           </Box>
