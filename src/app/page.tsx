@@ -6,6 +6,7 @@ import {
   Header,
   FeaturedProducts,
   FeaturedServices,
+  FeaturedPosts,
 } from "@/containers";
 import { store } from "@/redux-toolkit/store";
 import { fetchProductsList } from "@/redux-toolkit/slices/productSlice";
@@ -24,6 +25,8 @@ export default function Home() {
       <FeaturedProducts />
 
       <FeaturedServices />
+
+      <FeaturedPosts />
     </main>
   );
 }

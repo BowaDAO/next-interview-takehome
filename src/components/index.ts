@@ -10,6 +10,8 @@ import SearchIcon from "./search-icon/search-icon";
 import WishlistIcon from "./wishlist-icon/wishlist-icon";
 import SectionHeading from "./section-heading/section-heading";
 import ProductCard from "./product-card/product-card";
+import ServiceCard from "./service-card/service-card";
+import BlogCard from "./blog-card/blog-card";
 
 export {
   ReactQueryProvider,
@@ -24,4 +26,6 @@ export {
   WishlistIcon,
   SectionHeading,
   ProductCard,
+  ServiceCard,
+  BlogCard,
 };
