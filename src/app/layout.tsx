@@ -12,6 +12,7 @@ import {
   CssBaseline,
 } from "@mui/material";
 import theme from "@/material-ui/theme";
+import { GreenBanner, NavigationBar } from "@/containers";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -28,6 +29,11 @@ export default function RootLayout({
             <AppRouterCacheProvider options={{ enableCssLayer: true }}>
               <ThemeProvider theme={theme}>
                 <CssBaseline />
+
+                <GreenBanner />
+
+                <NavigationBar />
+
                 {children}
               </ThemeProvider>
             </AppRouterCacheProvider>

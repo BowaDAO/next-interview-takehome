@@ -12,6 +12,7 @@ import SectionHeading from "./section-heading/section-heading";
 import ProductCard from "./product-card/product-card";
 import ServiceCard from "./service-card/service-card";
 import BlogCard from "./blog-card/blog-card";
+import TestimonialMessage from "./testimonial-message/testimonial-message";
 
 export {
   ReactQueryProvider,
@@ -28,4 +29,5 @@ export {
   ProductCard,
   ServiceCard,
   BlogCard,
+  TestimonialMessage,
 };
