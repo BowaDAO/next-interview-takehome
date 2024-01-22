@@ -14,8 +14,6 @@ const FeaturedProducts = () => {
     (state: StateType) => state.product
   );
 
-  console.log(products, page);
-
   useEffect(() => {
     dispatch(fetchProductsList({ page, limit: 10 }));
   }, [page, dispatch]);
@@ -44,9 +42,7 @@ const FeaturedProducts = () => {
             {[...Array(10 * page)].map((_, index) => {
               return (
                 <Grid item key={index} xs={12} sm={6} md={4} lg={12 / 5}>
-                  <Box>
-                    <Skeleton variant="rectangular" width={183} height={400} />
-                  </Box>
+                  <Skeleton variant="rectangular" width={183} height={400} />
                 </Grid>
               );
             })}
@@ -56,9 +52,7 @@ const FeaturedProducts = () => {
             {products.map((product) => {
               return (
                 <Grid item key={product.id} xs={12} sm={6} md={4} lg={12 / 5}>
-                  <Box>
-                    <ProductCard product={product} />
-                  </Box>
+                  <ProductCard product={product} />
                 </Grid>
               );
             })}
@@ -68,26 +62,28 @@ const FeaturedProducts = () => {
         )}
       </Box>
 
-      {products.length < 30 && (
-        <Button
-          variant="outlined"
-          color="info"
-          sx={{ paddingX: "40px", paddingY: "15px" }}
-          onClick={() => setPage((page) => (page > 3 ? 0 : page + 1))}
-        >
-          <Typography
-            color="#23A6F0"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "22px",
-              letterSpacing: "0.2px",
-            }}
+      <>
+        {products.length > 0 && products.length < 30 && (
+          <Button
+            variant="outlined"
+            color="info"
+            sx={{ paddingX: "40px", paddingY: "15px" }}
+            onClick={() => setPage((page) => (page > 3 ? 0 : page + 1))}
           >
-            LOAD MORE PRODUCTS
-          </Typography>
-        </Button>
-      )}
+            <Typography
+              color="#23A6F0"
+              sx={{
+                fontSize: "14px",
+                fontWeight: 700,
+                lineHeight: "22px",
+                letterSpacing: "0.2px",
+              }}
+            >
+              LOAD MORE PRODUCTS
+            </Typography>
+          </Button>
+        )}
+      </>
     </Box>
   );
 };

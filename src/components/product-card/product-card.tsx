@@ -9,6 +9,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           height: "238px",
           position: "relative",
           display: "block",
+          width: "100%",
         }}
       >
         <Image

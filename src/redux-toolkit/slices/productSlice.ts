@@ -16,7 +16,7 @@ export const fetchProductsList = createAsyncThunk(
   "product/fetchProductsList",
   async ({ page, limit }: Query, { rejectWithValue }) => {
     return axios
-      .get(`https://dummyjson.com/products?limit=${limit * page}`)
+      .get(`https://dummyjson.com/products?limit=${limit * page}`) //dummyJson has no page implementation in its setup hence I did this. Page should have been a directly query parameter which allows us to persist previousPageData instead of reloading the entire data.
       .then((res) => {
         return res.data.products;
       })
