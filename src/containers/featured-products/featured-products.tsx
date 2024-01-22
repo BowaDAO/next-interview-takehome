@@ -37,7 +37,7 @@ const FeaturedProducts = () => {
       />
 
       <Box sx={{ margin: "24px" }}>
-        {status === "loading" ? (
+        {status.fetchAllProductsStatus === "loading" ? (
           <Grid container spacing="30px">
             {[...Array(10 * page)].map((_, index) => {
               return (
@@ -47,9 +47,9 @@ const FeaturedProducts = () => {
               );
             })}
           </Grid>
-        ) : status === "success" ? (
+        ) : status.fetchAllProductsStatus === "success" ? (
           <Grid container spacing="30px">
-            {products.map((product) => {
+            {products?.map((product: ProductType) => {
               return (
                 <Grid item key={product.id} xs={12} sm={6} md={4} lg={12 / 5}>
                   <ProductCard product={product} />
@@ -63,7 +63,7 @@ const FeaturedProducts = () => {
       </Box>
 
       <>
-        {products.length > 0 && products.length < 30 && (
+        {products?.length > 0 && products?.length < 30 && (
           <Button
             variant="outlined"
             color="info"

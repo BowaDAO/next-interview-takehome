@@ -7,6 +7,7 @@ import FeaturedPosts from "./featured-posts/featured-posts";
 import Testimonials from "./testimonials/testimonials";
 import CallToAction from "./call-to-action/call-to-action";
 import Footer from "./footer/footer";
+import ProductPageHeader from "./product-page-header/product-page-header";
 
 export {
   GreenBanner,
@@ -18,4 +19,5 @@ export {
   Testimonials,
   CallToAction,
   Footer,
+  ProductPageHeader,
 };

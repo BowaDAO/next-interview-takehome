@@ -1,15 +1,19 @@
-import { Box, Typography, Stack } from "@mui/material";
+import { Box, Typography, Stack, ButtonBase } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const ProductCard = ({ product }: { product: ProductType }) => {
+  const router = useRouter();
+
   return (
-    <Box>
+    <div onClick={() => router.push(`/products/${product.id}`)}>
       <Box
         sx={{
           height: "238px",
           position: "relative",
           display: "block",
           width: "100%",
+          cursor: "pointer",
         }}
       >
         <Image
@@ -88,7 +92,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           </Typography>
         </Stack>
       </Box>
-    </Box>
+    </div>
   );
 };
 

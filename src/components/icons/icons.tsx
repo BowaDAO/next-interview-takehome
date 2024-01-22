@@ -156,3 +156,59 @@ export const TwitterWhiteIcon = () => {
     </svg>
   );
 };
+
+export const BlueEllipse = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <circle cx="15" cy="15" r="15" fill="#23A6F0" />
+    </svg>
+  );
+};
+
+export const GreenEllipse = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <circle cx="15" cy="15" r="15" fill="#2DC071" />
+    </svg>
+  );
+};
+
+export const BrownEllipse = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <circle cx="15" cy="15" r="15" fill="#E77C40" />
+    </svg>
+  );
+};
+
+export const BlackEllipse = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+      fill="none"
+    >
+      <circle cx="15" cy="15" r="15" fill="#252B42" />
+    </svg>
+  );
+};

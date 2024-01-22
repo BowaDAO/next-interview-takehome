@@ -24,9 +24,9 @@ const Footer = () => {
           flexDirection: "column",
           alignItems: "flex-start",
           gap: "20px",
-
           width: "100%",
           paddingY: "40px",
+
           backgroundColor: "#FAFAFA",
 
           "@media (min-width: 1024px)": {
