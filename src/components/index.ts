@@ -13,6 +13,7 @@ import ProductCard from "./product-card/product-card";
 import ServiceCard from "./service-card/service-card";
 import BlogCard from "./blog-card/blog-card";
 import TestimonialMessage from "./testimonial-message/testimonial-message";
+import SubscribeInputField from "./subscribe-inputfield/subscribe-inputfield";
 
 export {
   ReactQueryProvider,
@@ -30,4 +31,5 @@ export {
   ServiceCard,
   BlogCard,
   TestimonialMessage,
+  SubscribeInputField,
 };

@@ -6,6 +6,7 @@ import FeaturedServices from "./featured-services/featured-services";
 import FeaturedPosts from "./featured-posts/featured-posts";
 import Testimonials from "./testimonials/testimonials";
 import CallToAction from "./call-to-action/call-to-action";
+import Footer from "./footer/footer";
 
 export {
   GreenBanner,
@@ -16,4 +17,5 @@ export {
   FeaturedPosts,
   Testimonials,
   CallToAction,
+  Footer,
 };

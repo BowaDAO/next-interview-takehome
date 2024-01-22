@@ -67,3 +67,45 @@ export const testimonialImagesData = [
     img: images.testimonial9,
   },
 ];
+
+export const footerLinks = [
+  {
+    heading: "Company Info",
+    sublinks: [
+      { label: "About Us" },
+      { label: "Career" },
+      { label: "We are hiring" },
+      { label: "Blog" },
+    ],
+  },
+
+  {
+    heading: "Legal",
+    sublinks: [
+      { label: "About Us" },
+      { label: "Career" },
+      { label: "We are hiring" },
+      { label: "Blog" },
+    ],
+  },
+
+  {
+    heading: "Features",
+    sublinks: [
+      { label: "Business Marketing" },
+      { label: "User Analytics" },
+      { label: "Live Chat" },
+      { label: "Unlimited Support" },
+    ],
+  },
+
+  {
+    heading: "Resources",
+    sublinks: [
+      { label: "IOS & Andriod" },
+      { label: "Watch a Demo" },
+      { label: "Customers" },
+      { label: "API" },
+    ],
+  },
+];
