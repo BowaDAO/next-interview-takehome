@@ -26,12 +26,9 @@ const NavigationBar = () => {
         }}
       >
         <Box component="div" display="flex" alignItems="center" gap="10px">
-          <Typography
-            component="span"
-            sx={{ paddingY: "13px", paddingRight: "79px" }}
-          >
+          <Box component="span" sx={{ paddingY: "13px", paddingRight: "79px" }}>
             <Logo />
-          </Typography>
+          </Box>
 
           <Navlinks />
         </Box>

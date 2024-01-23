@@ -18,7 +18,7 @@ import testimonial9 from "../../public/assets/images/testimonial9.png";
 import customerimage from "../../public/assets/images/customerimage.jpg";
 import ctabackground from "../../public/assets/images/ctabackground.png";
 
-export default {
+export const images = {
   heroimage1,
   heroimage2,
   heroimage3,

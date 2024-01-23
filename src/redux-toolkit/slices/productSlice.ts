@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const BASE_URL = `https://dummyjson.com/products`;
+
 type initialStateType = {
   products: ProductType[];
   status: {
@@ -20,7 +22,7 @@ export const fetchProductsList = createAsyncThunk(
   "product/fetchProductsList",
   async ({ page, limit }: Query, { rejectWithValue }) => {
     return axios
-      .get(`https://dummyjson.com/products?limit=${limit * page}`) //dummyJson has no page implementation in its setup hence I did this. Page should have been a directly query parameter which allows us to persist previousPageData instead of reloading the entire data.
+      .get(`${BASE_URL}?limit=${limit * page}`) //dummyJson has no page implementation in its setup hence I did this. Page should have been a direct query parameter which will allow us to persist previousPageData instead of reloading the entire data.
       .then((res) => {
         return res.data.products;
       })
@@ -45,7 +47,7 @@ export const fetchProductById = createAsyncThunk(
     { rejectWithValue }
   ) => {
     return axios
-      .get(`https://dummyjson.com/products/${productId}`)
+      .get(`${BASE_URL}/${productId}`)
       .then((res) => {
         return res.data;
       })
@@ -69,7 +71,7 @@ const initialState: initialStateType = {
     fetchAllProductsStatus: "idle",
     fetchProductByIdStatus: "idle",
   },
-  error: "null",
+  error: null,
   product: null,
 };
 

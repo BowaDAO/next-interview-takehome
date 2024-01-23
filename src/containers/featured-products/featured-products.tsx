@@ -14,7 +14,7 @@ import { fetchProductsList } from "@/redux-toolkit/slices/productSlice";
 import { usePathname } from "next/navigation";
 
 const FeaturedProducts = () => {
-  const [page, setPage] = useState<number>(1);
+  const [page, setPage] = useState(1);
 
   const dispatch: DispatchType = useDispatch();
 
@@ -65,36 +65,50 @@ const FeaturedProducts = () => {
       )}
 
       <Box sx={{ margin: "24px" }}>
-        {status.fetchAllProductsStatus === "loading" ? (
-          <Grid container spacing="30px">
-            {[...Array(10 * page)].map((_, index) => {
-              return (
-                <Grid item key={index} xs={12} sm={6} md={4} lg={12 / 5}>
-                  <Skeleton variant="rectangular" width={183} height={400} />
-                </Grid>
-              );
-            })}
-          </Grid>
-        ) : status.fetchAllProductsStatus === "success" ? (
-          <Grid container spacing="30px">
-            {products?.map((product: ProductType) => {
-              return (
-                <Grid
-                  item
-                  key={product.id}
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={thisIsProductRoute ? 3 : 12 / 5}
-                >
-                  <ProductCard product={product} />
-                </Grid>
-              );
-            })}
-          </Grid>
-        ) : (
-          <Box></Box>
-        )}
+        <>
+          {status.fetchAllProductsStatus === "loading" ? (
+            <Grid container spacing="30px">
+              {[...Array(10 * page)].map((_, index) => {
+                return (
+                  <Grid item key={index} xs={12} sm={6} md={4} lg={12 / 5}>
+                    <Skeleton
+                      variant="rectangular"
+                      sx={{
+                        height: "400px",
+                        width: "100%",
+
+                        "@media (min-width: 1200px)": {
+                          width: "183px",
+                        },
+                      }}
+                    />
+                  </Grid>
+                );
+              })}
+            </Grid>
+          ) : status.fetchAllProductsStatus === "success" ? (
+            <Grid container spacing="30px">
+              {products?.map((product: ProductType) => {
+                return (
+                  <Grid
+                    item
+                    key={product.id}
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={thisIsProductRoute ? 3 : 12 / 5}
+                  >
+                    <ProductCard product={product} />
+                  </Grid>
+                );
+              })}
+            </Grid>
+          ) : (
+            <Box>
+              <Typography>{error}</Typography>
+            </Box>
+          )}
+        </>
       </Box>
 
       <>

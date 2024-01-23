@@ -26,6 +26,7 @@ import { toast } from "react-toastify";
 
 const ProductPageHeader = ({ product }: { product: ProductType }) => {
   const { cartItems } = useSelector((state: StateType) => state.cart);
+
   const { wishlistItems } = useSelector((state: StateType) => state.wisthlist);
 
   const dispatch: DispatchType = useDispatch();

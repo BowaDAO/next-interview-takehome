@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, SvgIcon } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { footerLinks } from "@/constants/data";
 import { Logo, SubscribeInputField } from "@/components";
 import {
@@ -125,6 +125,7 @@ const Footer = () => {
           >
             Get in Touch
           </Typography>
+
           <SubscribeInputField />
         </Stack>
       </Box>

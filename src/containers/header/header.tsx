@@ -102,7 +102,6 @@ const Header = () => {
             <Box
               sx={{
                 position: "relative",
-                display: "block",
                 width: "80vw",
                 height: "300px",
 
@@ -129,7 +128,6 @@ const Header = () => {
             <Box
               sx={{
                 position: "relative",
-                display: "block",
                 width: "80vw",
                 height: "300px",
 

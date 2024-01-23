@@ -32,28 +32,30 @@ const CartIcon = () => {
 
   useEffect(() => {
     dispatch(calculateTotalCartItemsPrice(cartItems));
-  }, [cartItems, totalProductQuantity]);
+  }, [cartItems, totalProductQuantity, dispatch]);
 
   return (
-    <Badge
-      badgeContent={cartItems.length > 0 && cartItems.length}
-      color="default"
-      sx={{
-        color: "#23A6F0",
-        width: "56px",
-        height: "46px",
-      }}
-      overlap="circular"
-    >
-      <Button onClick={openCartPopup}>
-        <BlueCartIcon />
-      </Button>
+    <>
+      <Badge
+        badgeContent={cartItems?.length > 0 && cartItems.length}
+        color="default"
+        sx={{
+          color: "#23A6F0",
+          width: "56px",
+          height: "46px",
+        }}
+        overlap="circular"
+      >
+        <Button onClick={openCartPopup}>
+          <BlueCartIcon />
+        </Button>
+      </Badge>
 
       <Dialog open={modalOpen}>
         <DialogTitle>Cart</DialogTitle>
 
         <DialogContent>
-          {cartItems.length < 1 ? (
+          {cartItems?.length < 1 ? (
             <Box>
               <Typography
                 variant="h3"
@@ -66,7 +68,7 @@ const CartIcon = () => {
           ) : (
             <Box>
               <Stack direction="column" gap="20px">
-                {cartItems.map((item) => {
+                {cartItems?.map((item) => {
                   return <CartItem key={item.id} product={item} />;
                 })}
               </Stack>
@@ -75,7 +77,7 @@ const CartIcon = () => {
         </DialogContent>
 
         <DialogActions>
-          {cartItems.length > 0 && (
+          {cartItems?.length > 0 && (
             <Typography>Total Price: ${totalCartItemsPrice}</Typography>
           )}
 
@@ -84,7 +86,7 @@ const CartIcon = () => {
           </Button>
         </DialogActions>
       </Dialog>
-    </Badge>
+    </>
   );
 };
 

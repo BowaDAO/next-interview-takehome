@@ -22,9 +22,21 @@ const ProductPage = () => {
     (state: StateType) => state.product
   );
 
+  const { cartItems, totalProductQuantity } = useSelector(
+    (state: StateType) => state.cart
+  );
+
+  const { wishlistItems } = useSelector((state: StateType) => state.wisthlist);
+
   useEffect(() => {
     dispatch(fetchProductById({ productId: id }));
-  }, [dispatch]);
+  }, [dispatch, id]);
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+  }, [cartItems, wishlistItems]);
 
   return (
     <>

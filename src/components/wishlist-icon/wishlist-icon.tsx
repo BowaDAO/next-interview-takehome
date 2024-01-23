@@ -28,25 +28,27 @@ const WishlistIcon = () => {
   const dispatch: DispatchType = useDispatch();
 
   return (
-    <Badge
-      badgeContent={wishlistItems.length > 0 && wishlistItems.length}
-      color="default"
-      style={{
-        color: "#23A6F0",
-        width: "56px",
-        height: "46px",
-      }}
-      overlap="circular"
-    >
-      <Button onClick={openWishlistPopup}>
-        <BlueWishlistIcon />
-      </Button>
+    <>
+      <Badge
+        badgeContent={wishlistItems?.length > 0 && wishlistItems.length}
+        color="default"
+        style={{
+          color: "#23A6F0",
+          width: "56px",
+          height: "46px",
+        }}
+        overlap="circular"
+      >
+        <Button onClick={openWishlistPopup}>
+          <BlueWishlistIcon />
+        </Button>
+      </Badge>
 
       <Dialog open={modalOpen}>
         <DialogTitle>Wishlists</DialogTitle>
 
-        <DialogContent sx={{ minWidth: "500px" }}>
-          {wishlistItems.length < 1 ? (
+        <DialogContent sx={{ width: "500px", maxWidth: "100%" }}>
+          {wishlistItems?.length < 1 ? (
             <Box>
               <Typography>
                 Your wishlist is currently empty. Use the heart icon in a
@@ -61,7 +63,7 @@ const WishlistIcon = () => {
                 gap: "20px",
               }}
             >
-              {wishlistItems.map((product) => {
+              {wishlistItems?.map((product) => {
                 return (
                   <Stack
                     key={product.id}
@@ -117,7 +119,7 @@ const WishlistIcon = () => {
           </Button>
         </DialogActions>
       </Dialog>
-    </Badge>
+    </>
   );
 };
 

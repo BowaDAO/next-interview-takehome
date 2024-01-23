@@ -1,11 +1,5 @@
-import {
-  ListItem,
-  ListItemButton,
-  List,
-  ListItemText,
-  Box,
-  SvgIcon,
-} from "@mui/material";
+import { ListItemButton, List, ListItemText } from "@mui/material";
+import { BlackArrowDown } from "../icons/icons";
 
 const Navlinks = () => {
   return (
@@ -15,7 +9,7 @@ const Navlinks = () => {
         alignItems: "center",
       }}
     >
-      <ListItemButton component="a">
+      <ListItemButton>
         <ListItemText
           primary="Home"
           primaryTypographyProps={{
@@ -43,23 +37,10 @@ const Navlinks = () => {
           }}
         />
 
-        <SvgIcon style={{ width: "10px", height: "7px" }}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="7"
-            viewBox="0 0 10 7"
-            fill="none"
-          >
-            <path
-              d="M1.42857 0.5L5 4.07143L8.57143 0.5L10 1.21429L5 6.21429L-3.12224e-08 1.21429L1.42857 0.5Z"
-              fill="#252B42"
-            />
-          </svg>
-        </SvgIcon>
+        <BlackArrowDown />
       </ListItemButton>
 
-      <ListItemButton component="a">
+      <ListItemButton>
         <ListItemText
           primary="About"
           primaryTypographyProps={{
@@ -72,7 +53,7 @@ const Navlinks = () => {
         />
       </ListItemButton>
 
-      <ListItemButton component="a">
+      <ListItemButton>
         <ListItemText
           primary="Blog"
           primaryTypographyProps={{
@@ -85,7 +66,7 @@ const Navlinks = () => {
         />
       </ListItemButton>
 
-      <ListItemButton component="a">
+      <ListItemButton>
         <ListItemText
           primary="Contact"
           primaryTypographyProps={{
@@ -98,7 +79,7 @@ const Navlinks = () => {
         />
       </ListItemButton>
 
-      <ListItemButton component="a">
+      <ListItemButton>
         <ListItemText
           primary="Pages"
           primaryTypographyProps={{

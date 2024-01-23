@@ -1,12 +1,4 @@
-import {
-  Input,
-  Box,
-  Button,
-  Stack,
-  FormControl,
-  FormLabel,
-  TextField,
-} from "@mui/material";
+import { Button, Stack, TextField } from "@mui/material";
 
 const SubscribeInputField = () => {
   return (

@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getDataFromLocalStorage } from "@/utilities/valuesFromLocalStorage";
 
 type initialStateType = {
   wishlistItems: ProductType[];
 };
 
 const initialState: initialStateType = {
-  wishlistItems: [],
+  wishlistItems: getDataFromLocalStorage("wishlistItems"),
 };
 
 const wishlistSlice = createSlice({

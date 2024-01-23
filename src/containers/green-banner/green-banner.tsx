@@ -18,13 +18,13 @@ const GreenBanner = () => {
         },
       }}
     >
-      <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <Phone />
 
         <Email />
       </Box>
 
-      <Box component="span" padding={10}>
+      <Box padding={10}>
         <Typography
           component="h6"
           sx={{

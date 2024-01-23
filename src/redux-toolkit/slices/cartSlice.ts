@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getDataFromLocalStorage } from "@/utilities/valuesFromLocalStorage";
 
 type initialStateType = {
   cartItems: ProductType[];
@@ -7,7 +8,7 @@ type initialStateType = {
 };
 
 const initialState: initialStateType = {
-  cartItems: [],
+  cartItems: getDataFromLocalStorage("cartItems"),
   totalCartItemsPrice: 0,
   totalProductQuantity: 0,
 };

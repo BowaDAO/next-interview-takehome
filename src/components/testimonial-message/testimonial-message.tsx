@@ -29,7 +29,6 @@ const TestimonialMessage = () => {
         <Box
           sx={{
             position: "relative",
-            display: "block",
             width: "90px",
             height: "90px",
             borderRadius: "100%",
