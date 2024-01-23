@@ -1,22 +1,34 @@
 import { SectionHeading, ProductCard } from "@/components";
-import { Box, Grid, Skeleton, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Skeleton,
+  Button,
+  Typography,
+  Divider,
+} from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { DispatchType, StateType } from "@/redux-toolkit/store";
 import { useEffect, useState } from "react";
 import { fetchProductsList } from "@/redux-toolkit/slices/productSlice";
+import { usePathname } from "next/navigation";
 
 const FeaturedProducts = () => {
   const [page, setPage] = useState<number>(1);
 
   const dispatch: DispatchType = useDispatch();
 
-  const { products, status, error } = useSelector(
+  const pathname = usePathname();
+
+  const { products, status, error, product } = useSelector(
     (state: StateType) => state.product
   );
 
   useEffect(() => {
     dispatch(fetchProductsList({ page, limit: 10 }));
   }, [page, dispatch]);
+
+  const thisIsProductRoute = Boolean(pathname === `/products/${product?.id}`);
 
   return (
     <Box
@@ -25,16 +37,32 @@ const FeaturedProducts = () => {
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: thisIsProductRoute ? "flex-start" : "center",
         justifyContent: "center",
         gap: "32px",
+        backgroundColor: thisIsProductRoute ? "#FAFAFA" : "#FFF",
       }}
     >
-      <SectionHeading
-        h3="BESTSELLER PRODUCTS"
-        h2="Featured Products "
-        text="Problems trying to resolve the conflict between "
-      />
+      <>
+        {thisIsProductRoute ? (
+          <SectionHeading h3="BESTSELLER PRODUCTS" />
+        ) : (
+          <SectionHeading
+            h3="BESTSELLER PRODUCTS"
+            h2="Featured Products "
+            text="Problems trying to resolve the conflict between "
+          />
+        )}
+      </>
+
+      {thisIsProductRoute && (
+        <Divider
+          sx={{
+            color: "#ECECEC",
+            minWidth: "100%",
+          }}
+        />
+      )}
 
       <Box sx={{ margin: "24px" }}>
         {status.fetchAllProductsStatus === "loading" ? (
@@ -51,7 +79,14 @@ const FeaturedProducts = () => {
           <Grid container spacing="30px">
             {products?.map((product: ProductType) => {
               return (
-                <Grid item key={product.id} xs={12} sm={6} md={4} lg={12 / 5}>
+                <Grid
+                  item
+                  key={product.id}
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={thisIsProductRoute ? 3 : 12 / 5}
+                >
                   <ProductCard product={product} />
                 </Grid>
               );
@@ -63,26 +98,28 @@ const FeaturedProducts = () => {
       </Box>
 
       <>
-        {products?.length > 0 && products?.length < 30 && (
-          <Button
-            variant="outlined"
-            color="info"
-            sx={{ paddingX: "40px", paddingY: "15px" }}
-            onClick={() => setPage((page) => (page > 3 ? 0 : page + 1))}
-          >
-            <Typography
-              color="#23A6F0"
-              sx={{
-                fontSize: "14px",
-                fontWeight: 700,
-                lineHeight: "22px",
-                letterSpacing: "0.2px",
-              }}
+        {!thisIsProductRoute &&
+          products?.length > 0 &&
+          products?.length < 30 && (
+            <Button
+              variant="outlined"
+              color="info"
+              sx={{ paddingX: "40px", paddingY: "15px" }}
+              onClick={() => setPage((page) => (page > 3 ? 0 : page + 1))}
             >
-              LOAD MORE PRODUCTS
-            </Typography>
-          </Button>
-        )}
+              <Typography
+                color="#23A6F0"
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  lineHeight: "22px",
+                  letterSpacing: "0.2px",
+                }}
+              >
+                LOAD MORE PRODUCTS
+              </Typography>
+            </Button>
+          )}
       </>
     </Box>
   );

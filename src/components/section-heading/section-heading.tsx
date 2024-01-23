@@ -1,9 +1,9 @@
 import { Typography, Stack } from "@mui/material";
 
 type SectionHeadingProp = {
-  h2: string;
-  h3: string;
-  text: string;
+  h2?: string;
+  h3?: string;
+  text?: string;
 };
 
 const SectionHeading = (props: SectionHeadingProp) => {

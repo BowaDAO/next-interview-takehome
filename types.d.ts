@@ -10,6 +10,7 @@ type ProductType = {
   category: string;
   thumbnail: string;
   images: string[];
+  quantity: number;
 };
 
 type ErrorResponse = {

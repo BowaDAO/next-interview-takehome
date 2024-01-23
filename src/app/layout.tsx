@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import theme from "@/material-ui/theme";
 import { GreenBanner, NavigationBar, Footer } from "@/containers";
+import "react-toastify/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -34,8 +36,13 @@ export default function RootLayout({
 
                 <NavigationBar />
 
-                {children}
+                <main style={{ minHeight: "100vh" }}>{children}</main>
 
+                <ToastContainer
+                  autoClose={3000}
+                  theme="colored"
+                  position="bottom-right"
+                />
                 <Footer />
               </ThemeProvider>
             </AppRouterCacheProvider>

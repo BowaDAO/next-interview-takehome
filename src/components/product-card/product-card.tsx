@@ -17,7 +17,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         }}
       >
         <Image
-          src={product.images[0]}
+          src={product.thumbnail}
           alt={product.title}
           quality={100}
           fill

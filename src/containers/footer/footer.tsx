@@ -6,8 +6,13 @@ import {
   InstagramBlueIcon,
   TwitterBlueIcon,
 } from "@/components/icons/icons";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const thisIsHomeRoute = Boolean(pathname === "/");
+
   return (
     <Box
       component="footer"
@@ -26,8 +31,7 @@ const Footer = () => {
           gap: "20px",
           width: "100%",
           paddingY: "40px",
-
-          backgroundColor: "#FAFAFA",
+          backgroundColor: thisIsHomeRoute ? "#FAFAFA" : "#FFF",
 
           "@media (min-width: 1024px)": {
             flexDirection: "row",
@@ -131,6 +135,12 @@ const Footer = () => {
           paddingY: "25px",
           width: "100%",
           backgroundColor: "#FAFAFA",
+          display: "flex",
+          justifyContent: "center",
+
+          "@media (min-width: 768px)": {
+            justifyContent: "flex-start",
+          },
         }}
       >
         <Typography

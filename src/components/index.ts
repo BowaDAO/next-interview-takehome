@@ -14,6 +14,7 @@ import ServiceCard from "./service-card/service-card";
 import BlogCard from "./blog-card/blog-card";
 import TestimonialMessage from "./testimonial-message/testimonial-message";
 import SubscribeInputField from "./subscribe-inputfield/subscribe-inputfield";
+import PartnerCompanies from "./partner-companies/partner-companies";
 
 export {
   ReactQueryProvider,
@@ -32,4 +33,5 @@ export {
   BlogCard,
   TestimonialMessage,
   SubscribeInputField,
+  PartnerCompanies,
 };
