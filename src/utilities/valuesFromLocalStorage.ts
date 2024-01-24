@@ -3,9 +3,9 @@ export const getDataFromLocalStorage = (storageName: string) => {
     const localStorageData = localStorage.getItem(`${storageName}`);
 
     if (localStorageData) {
-      const storedKeyValueArrays = JSON.parse(localStorageData);
+      const parsedData = JSON.parse(localStorageData);
 
-      return storedKeyValueArrays;
+      return parsedData;
     } else {
       return [];
     }

@@ -22,9 +22,7 @@ const ProductPage = () => {
     (state: StateType) => state.product
   );
 
-  const { cartItems, totalProductQuantity } = useSelector(
-    (state: StateType) => state.cart
-  );
+  const { cartItems } = useSelector((state: StateType) => state.cart);
 
   const { wishlistItems } = useSelector((state: StateType) => state.wisthlist);
 
@@ -40,11 +38,13 @@ const ProductPage = () => {
 
   return (
     <>
-      {status.fetchProductByIdStatus === "loading" ? (
-        <Box sx={{ minHeight: "100vh" }}></Box>
-      ) : status.fetchProductByIdStatus === "failed" ? (
-        <Box>
-          <Typography>{error}</Typography>
+      {status.fetchProductById === "loading" ? (
+        <Box sx={{ minHeight: "100vh", textAlign: "center" }}>
+          <Typography>Loading...</Typography>
+        </Box>
+      ) : status.fetchProductById === "failed" ? (
+        <Box textAlign="center">
+          {error && <Typography variant="body2">{error}</Typography>}
         </Box>
       ) : (
         <>

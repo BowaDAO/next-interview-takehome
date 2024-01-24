@@ -37,10 +37,12 @@ const FeaturedProducts = () => {
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
-        alignItems: thisIsProductRoute ? "flex-start" : "center",
+        alignItems: thisIsProductRoute ? "flex-start" : "",
         justifyContent: "center",
         gap: "32px",
-        backgroundColor: thisIsProductRoute ? "#FAFAFA" : "#FFF",
+        backgroundColor: thisIsProductRoute
+          ? "secondary.light"
+          : "common.white",
       }}
     >
       <>
@@ -58,7 +60,7 @@ const FeaturedProducts = () => {
       {thisIsProductRoute && (
         <Divider
           sx={{
-            color: "#ECECEC",
+            color: "primary.main",
             minWidth: "100%",
           }}
         />
@@ -66,7 +68,7 @@ const FeaturedProducts = () => {
 
       <Box sx={{ margin: "24px" }}>
         <>
-          {status.fetchAllProductsStatus === "loading" ? (
+          {status.fetchAllProducts === "loading" ? (
             <Grid container spacing="30px">
               {[...Array(10 * page)].map((_, index) => {
                 return (
@@ -76,17 +78,17 @@ const FeaturedProducts = () => {
                       sx={{
                         height: "400px",
                         width: "100%",
-
-                        "@media (min-width: 1200px)": {
-                          width: "183px",
-                        },
                       }}
                     />
                   </Grid>
                 );
               })}
             </Grid>
-          ) : status.fetchAllProductsStatus === "success" ? (
+          ) : status.fetchAllProducts === "failed" ? (
+            <Box textAlign="center">
+              {error && <Typography variant="body2">{error}</Typography>}
+            </Box>
+          ) : (
             <Grid container spacing="30px">
               {products?.map((product: ProductType) => {
                 return (
@@ -103,10 +105,6 @@ const FeaturedProducts = () => {
                 );
               })}
             </Grid>
-          ) : (
-            <Box>
-              <Typography>{error}</Typography>
-            </Box>
           )}
         </>
       </Box>
@@ -119,17 +117,9 @@ const FeaturedProducts = () => {
               variant="outlined"
               color="info"
               sx={{ paddingX: "40px", paddingY: "15px" }}
-              onClick={() => setPage((page) => (page > 3 ? 0 : page + 1))}
+              onClick={() => setPage((page) => page + 1)}
             >
-              <Typography
-                color="#23A6F0"
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  lineHeight: "22px",
-                  letterSpacing: "0.2px",
-                }}
-              >
+              <Typography variant="h6" color="secondary.dark">
                 LOAD MORE PRODUCTS
               </Typography>
             </Button>

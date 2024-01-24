@@ -7,13 +7,9 @@ const Login = () => {
       <UserIcon />
 
       <Typography
-        component="p"
+        variant="h6"
+        color="secondary.dark"
         sx={{
-          fontSize: "14px",
-          fontWeight: "700",
-          lineHeight: "24px",
-          letterSpacing: "0.2px",
-          fontStyle: "normal",
           color: "#23A6F0",
           textTransform: "capitalize",
         }}

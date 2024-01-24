@@ -2,22 +2,20 @@
 
 import {
   Header,
-  // FeaturedProducts,
+  FeaturedProducts,
   FeaturedServices,
   FeaturedPosts,
   Testimonials,
   CallToAction,
 } from "@/containers";
-import dynamic from "next/dynamic";
+import { store } from "@/redux-toolkit/store";
+import { fetchProductsList } from "@/redux-toolkit/slices/productSlice";
 
-const FeaturedProducts = dynamic(
-  () => import("../containers/featured-products/featured-products"),
-  { ssr: false }
-);
+store.dispatch(fetchProductsList({ page: 1, limit: 10 }));
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
 
       <FeaturedProducts />
@@ -29,6 +27,6 @@ export default function Home() {
       <Testimonials />
 
       <CallToAction />
-    </main>
+    </>
   );
 }

@@ -15,17 +15,7 @@ const BannerSocials = () => {
       gap="10px"
       padding="10px"
     >
-      <Typography
-        component="h6"
-        sx={{
-          fontSize: "14px",
-          fontWeight: "600",
-          lineHeight: "24px",
-          letterSpacing: "0.2px",
-          fontStyle: "normal",
-          color: "#FFF",
-        }}
-      >
+      <Typography variant="h6" color="common.white">
         Follow Us :
       </Typography>
 

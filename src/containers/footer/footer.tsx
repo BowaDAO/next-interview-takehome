@@ -76,16 +76,7 @@ const Footer = () => {
               key={index.toString()}
               sx={{ display: "flex", flexDirection: "column", gap: "20px" }}
             >
-              <Typography
-                variant="h5"
-                color="#252B42"
-                sx={{
-                  fontSize: "16px",
-                  fontWeight: 700,
-                  lineHeight: "24px",
-                  letterSpacing: "0.1px",
-                }}
-              >
+              <Typography variant="h5" color="text.primary">
                 {heading}
               </Typography>
 
@@ -95,13 +86,8 @@ const Footer = () => {
                   return (
                     <Typography //Should be NextJS Link but since there are no inner routes, I had to do this.
                       key={index.toString()}
-                      color="#737373"
-                      sx={{
-                        fontSize: "14px",
-                        fontWeight: 700,
-                        lineHeight: "24px",
-                        letterSpacing: "0.2px",
-                      }}
+                      variant="h6"
+                      color="text.secondary"
                     >
                       {label}
                     </Typography>
@@ -113,16 +99,7 @@ const Footer = () => {
         })}
 
         <Stack direction="column" gap="20px">
-          <Typography
-            variant="h5"
-            color="#252B42"
-            sx={{
-              fontSize: "16px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              letterSpacing: "0.1px",
-            }}
-          >
+          <Typography variant="h5" color="text.primary">
             Get in Touch
           </Typography>
 
@@ -138,22 +115,14 @@ const Footer = () => {
           backgroundColor: "#FAFAFA",
           display: "flex",
           justifyContent: "center",
+          textAlign: "center",
 
           "@media (min-width: 768px)": {
             justifyContent: "flex-start",
           },
         }}
       >
-        <Typography
-          variant="body1"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="text.secondary">
           Made With Love By Finland All Right Reserved
         </Typography>
       </Box>

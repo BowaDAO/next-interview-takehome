@@ -5,13 +5,12 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Provider } from "react-redux";
 import { store } from "@/redux-toolkit/store";
-import { ReactQueryProvider } from "@/components";
 import {
   StyledEngineProvider,
   ThemeProvider,
   CssBaseline,
 } from "@mui/material";
-import theme from "@/material-ui/theme";
+import theme from "@/styles/theme";
 import { GreenBanner, NavigationBar, Footer } from "@/containers";
 import "react-toastify/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
@@ -27,26 +26,27 @@ export default function RootLayout({
     <html>
       <body className={montserrat.className}>
         <Provider store={store}>
-          <ReactQueryProvider>
+          <ThemeProvider theme={theme}>
             <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-              <ThemeProvider theme={theme}>
-                <CssBaseline />
+              <CssBaseline />
 
+              <main>
                 <GreenBanner />
 
                 <NavigationBar />
 
-                <main style={{ minHeight: "100vh" }}>{children}</main>
+                <div style={{ minHeight: "100vh" }}>{children}</div>
 
-                <ToastContainer
-                  autoClose={3000}
-                  theme="colored"
-                  position="bottom-right"
-                />
                 <Footer />
-              </ThemeProvider>
+              </main>
+
+              <ToastContainer
+                autoClose={3000}
+                theme="colored"
+                position="bottom-right"
+              />
             </AppRouterCacheProvider>
-          </ReactQueryProvider>
+          </ThemeProvider>
         </Provider>
       </body>
     </html>

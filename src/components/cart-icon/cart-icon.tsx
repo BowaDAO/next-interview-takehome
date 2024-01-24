@@ -38,9 +38,8 @@ const CartIcon = () => {
     <>
       <Badge
         badgeContent={cartItems?.length > 0 && cartItems.length}
-        color="default"
         sx={{
-          color: "#23A6F0",
+          color: "secondary.dark",
           width: "56px",
           height: "46px",
         }}
@@ -57,10 +56,7 @@ const CartIcon = () => {
         <DialogContent>
           {cartItems?.length < 1 ? (
             <Box>
-              <Typography
-                variant="h3"
-                sx={{ fontSize: "16px", lineHeight: "32px" }}
-              >
+              <Typography variant="body2">
                 Your cart is currently empty. Use the cart icon on a product
                 page to add it to your cart.
               </Typography>

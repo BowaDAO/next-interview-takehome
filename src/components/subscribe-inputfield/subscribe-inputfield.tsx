@@ -2,20 +2,32 @@ import { Button, Stack, TextField } from "@mui/material";
 
 const SubscribeInputField = () => {
   return (
-    <Stack direction="row" height="58px">
+    <Stack direction="row" alignItems="flex-start">
       <TextField
-        variant="outlined"
-        label="Your email"
         color="info"
-        fullWidth
-        InputLabelProps={{ shrink: false }}
-        sx={{ width: "204px", borderRadius: 0 }}
+        inputMode="text"
+        inputProps={{ style: { fontSize: "16px" } }}
+        sx={{
+          width: "204px",
+          borderTopRightRadius: 0,
+          borderBottomRightRadius: 0,
+          "& fieldset": {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
+            height: "58px",
+          },
+        }}
       />
 
       <Button
         variant="contained"
         color="info"
-        sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
+        disableElevation
+        sx={{
+          borderTopLeftRadius: 0,
+          borderBottomLeftRadius: 0,
+          height: "53px",
+        }}
       >
         Subscribe
       </Button>

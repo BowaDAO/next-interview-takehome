@@ -22,42 +22,15 @@ const ProductPageBody = ({ product }: { product: ProductType }) => {
           },
         }}
       >
-        <Typography
-          variant="body1"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 600,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="text.secondary">
           Description
         </Typography>
 
-        <Typography
-          variant="body1"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 600,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="text.secondary">
           Additional Information
         </Typography>
 
-        <Typography
-          variant="body1"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 600,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="text.secondary">
           Review(0)
         </Typography>
       </Stack>
@@ -78,16 +51,7 @@ const ProductPageBody = ({ product }: { product: ProductType }) => {
           },
         }}
       >
-        <Typography
-          variant="body2"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 400,
-            lineHeight: "20px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="body2" color="text.secondary">
           {product.description}
         </Typography>
 

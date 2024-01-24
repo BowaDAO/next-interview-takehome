@@ -6,17 +6,7 @@ const Email = () => {
     <Box display="flex" alignItems="center" gap="5px" padding="10px">
       <EmailIcon />
 
-      <Typography
-        component="h6"
-        sx={{
-          fontSize: "14px",
-          fontWeight: "600",
-          lineHeight: "24px",
-          letterSpacing: "0.2px",
-          fontStyle: "normal",
-          color: "#FFF",
-        }}
-      >
+      <Typography variant="h6" color="common.white">
         michelle.rivera@example.com
       </Typography>
     </Box>

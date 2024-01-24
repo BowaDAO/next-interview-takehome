@@ -5,16 +5,7 @@ import Image from "next/image";
 const TestimonialMessage = () => {
   return (
     <Stack direction="column" alignItems="center" spacing="28px">
-      <Typography
-        variant="h6"
-        color="#252B42"
-        sx={{
-          fontSize: "24px",
-          fontWeight: 700,
-          lineHeight: "32px",
-          letterSpacing: "0.1px",
-        }}
-      >
+      <Typography variant="h3" color="text.primary">
         What they say about us
       </Typography>
 
@@ -46,44 +37,17 @@ const TestimonialMessage = () => {
 
         <Rating value={4} />
 
-        <Typography
-          variant="h6"
-          color="#737373"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            leterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="text.secondary">
           Slate helps you see how many more days you need to work to reach your
           financial goal
         </Typography>
 
         <Stack direction="column" alignItems="center">
-          <Typography
-            variant="body2"
-            color="#23A6F0"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              leterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="body2" color="secondary.dark">
             Regina Miles
           </Typography>
 
-          <Typography
-            variant="h6"
-            color="#252B42"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              leterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="h6" color="text.primary">
             Designer
           </Typography>
         </Stack>

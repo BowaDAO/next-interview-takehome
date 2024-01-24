@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, ButtonBase } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -38,12 +38,8 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       >
         <Typography
           variant="h5"
-          color="#252B42"
+          color="text.primary"
           sx={{
-            fontSize: "16px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.1px",
             textAlign: "center",
           }}
         >
@@ -51,13 +47,9 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         </Typography>
 
         <Typography
-          variant="body2"
-          color="#737373"
+          variant="h6"
+          color="text.secondary"
           sx={{
-            fontSize: "14px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
             textAlign: "center",
           }}
         >
@@ -65,29 +57,11 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         </Typography>
 
         <Stack direction="row" spacing="5px">
-          <Typography
-            variant="h5"
-            color="#BDBDBD"
-            sx={{
-              fontSize: "16px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              letterSpacing: "0.1px",
-            }}
-          >
+          <Typography variant="h5" color="primary.light">
             ${product.price}
           </Typography>
 
-          <Typography
-            variant="h5"
-            color="#23856D"
-            sx={{
-              fontSize: "16px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              letterSpacing: "0.1px",
-            }}
-          >
+          <Typography variant="h5" color="secondary.main">
             ${product.discountPercentage}
           </Typography>
         </Stack>

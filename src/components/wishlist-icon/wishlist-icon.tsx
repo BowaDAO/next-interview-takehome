@@ -33,7 +33,7 @@ const WishlistIcon = () => {
         badgeContent={wishlistItems?.length > 0 && wishlistItems.length}
         color="default"
         style={{
-          color: "#23A6F0",
+          color: "secondary.dark",
           width: "56px",
           height: "46px",
         }}
@@ -50,7 +50,7 @@ const WishlistIcon = () => {
         <DialogContent sx={{ width: "500px", maxWidth: "100%" }}>
           {wishlistItems?.length < 1 ? (
             <Box>
-              <Typography>
+              <Typography variant="body2">
                 Your wishlist is currently empty. Use the heart icon in a
                 product page to add it to your wishlist.
               </Typography>
@@ -70,8 +70,8 @@ const WishlistIcon = () => {
                     direction="row"
                     spacing="100px"
                     alignItems="center"
-                    borderTop="1px solid #ECECEC"
-                    borderBottom=" 1px solid #ECECEC"
+                    borderTop="1px solid primary.main"
+                    borderBottom=" 1px solid primary.main"
                   >
                     <Box
                       sx={{
@@ -94,7 +94,7 @@ const WishlistIcon = () => {
                       spacing="5px"
                       alignItems="flex-start"
                     >
-                      <Typography>{product.title}</Typography>
+                      <Typography variant="h6"> {product.title}</Typography>
 
                       <Button
                         size="small"

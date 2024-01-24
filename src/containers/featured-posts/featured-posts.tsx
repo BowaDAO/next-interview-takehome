@@ -17,29 +17,11 @@ const FeaturedPosts = () => {
       }}
     >
       <Stack alignItems="center" spacing="10px">
-        <Typography
-          variant="h6"
-          color="#23A6F0"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="secondary.dark">
           Practice Advice
         </Typography>
 
-        <Typography
-          variant="h3"
-          color="#252B42"
-          sx={{
-            fontSize: "40px",
-            fontWeight: 700,
-            lineHeight: "50px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h1" color="text.primary">
           Featured Posts
         </Typography>
       </Stack>

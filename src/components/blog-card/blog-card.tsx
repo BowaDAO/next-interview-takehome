@@ -33,6 +33,7 @@ const BlogCard = ({ blog }: { blog: Props }) => {
           fill
           loading="lazy"
           quality={100}
+          sizes="any"
         />
 
         <Box
@@ -48,16 +49,7 @@ const BlogCard = ({ blog }: { blog: Props }) => {
           alignItems="center"
           justifyContent="center"
         >
-          <Typography
-            variant="h6"
-            color="#FFF"
-            sx={{
-              fontSize: "14px",
-              lineHeight: "24px",
-              fontWeight: 700,
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="h6" color="common.white">
             NEW
           </Typography>
         </Box>
@@ -83,45 +75,17 @@ const BlogCard = ({ blog }: { blog: Props }) => {
         >
           <Stack direction="row" gap="15px">
             {blog.postTags?.map((tag, index) => (
-              <Typography
-                variant="body1"
-                key={index}
-                color="#737373"
-                sx={{
-                  fontSize: "12px",
-                  lineHeight: "16px",
-                  fontWeight: 400,
-                  letterSpacing: "0.2px",
-                }}
-              >
+              <Typography key={index} variant="body2" color="text.secondary">
                 {tag}
               </Typography>
             ))}
           </Stack>
 
-          <Typography
-            variant="h4"
-            color="#252B42"
-            sx={{
-              fontSize: "20px",
-              fontWeight: 400,
-              lineHeight: "30px",
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="body1" color="text.primary">
             {blog.postTitle}
           </Typography>
 
-          <Typography
-            variant="body1"
-            color="#737373"
-            sx={{
-              fontSize: "14px",
-              lineHeight: "20px",
-              fontWeight: 400,
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="body2" color="text.secondary">
             {blog.postMetaDescription}
           </Typography>
 
@@ -136,16 +100,7 @@ const BlogCard = ({ blog }: { blog: Props }) => {
             <Stack direction="row" spacing="5px" alignItems="center">
               <DateIcon />
 
-              <Typography
-                variant="body2"
-                color="#737373"
-                sx={{
-                  fontSize: "12px",
-                  lineHeight: "16px",
-                  fontWeight: 400,
-                  letterSpacing: "0.2px",
-                }}
-              >
+              <Typography variant="body2" color="text.secondary">
                 {formattedDate}
               </Typography>
             </Stack>
@@ -153,16 +108,7 @@ const BlogCard = ({ blog }: { blog: Props }) => {
             <Stack direction="row" spacing="5px" alignItems="center">
               <MetricIcon />
 
-              <Typography
-                variant="body2"
-                color="#737373"
-                sx={{
-                  fontSize: "12px",
-                  lineHeight: "16px",
-                  fontWeight: 400,
-                  letterSpacing: "0.2px",
-                }}
-              >
+              <Typography variant="body2" color="text.secondary">
                 10 comments
               </Typography>
             </Stack>
@@ -183,12 +129,8 @@ const BlogCard = ({ blog }: { blog: Props }) => {
           >
             <Typography
               variant="h6"
-              color="#737373"
+              color="text.secondary"
               sx={{
-                fontSize: "14px",
-                lineHeight: "24px",
-                fontWeight: 700,
-                letterSpacing: "0.2px",
                 textTransform: "capitalize",
               }}
             >

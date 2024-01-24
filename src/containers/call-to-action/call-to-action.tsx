@@ -28,57 +28,20 @@ const CallToAction = () => {
         spacing="30px"
         alignItems="center"
       >
-        <Typography
-          variant="h2"
-          color="#23A6F0"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h6" color="secondary.dark">
           Designing Better Experience
         </Typography>
 
-        <Typography
-          variant="h2"
-          color="#252B42"
-          sx={{
-            fontSize: "40px",
-            fontWeight: 700,
-            lineHeight: "50px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="h1" color="text.primary">
           Problems trying to resolve the conflict between
         </Typography>
 
-        <Typography
-          variant="body1"
-          color="#737373"
-          maxWidth="447px"
-          sx={{
-            fontSize: "14px",
-            fontWeight: 400,
-            lineHeight: "20px",
-            letterSpacing: "0.2px",
-          }}
-        >
+        <Typography variant="body2" color="text.secondary" maxWidth="447px">
           Problems trying to resolve the conflict between the two major realms
           of Classical physics:
         </Typography>
 
-        <Typography
-          variant="h5"
-          color="#23856D"
-          sx={{
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "32px",
-            letterSpacing: "0.1px",
-          }}
-        >
+        <Typography variant="h3" color="secondary.main">
           $16.48
         </Typography>
 
@@ -90,15 +53,7 @@ const CallToAction = () => {
             width: "292px",
           }}
         >
-          <Typography
-            color="#FFF"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "22px",
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="h6" color="common.white">
             ADD YOUR CALL TO ACTION
           </Typography>
         </Button>

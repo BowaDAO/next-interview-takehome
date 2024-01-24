@@ -7,8 +7,10 @@ type initialStateType = {
   totalProductQuantity: number;
 };
 
+const cartItemsFromStorage = getDataFromLocalStorage("cartItems");
+
 const initialState: initialStateType = {
-  cartItems: getDataFromLocalStorage("cartItems"),
+  cartItems: cartItemsFromStorage,
   totalCartItemsPrice: 0,
   totalProductQuantity: 0,
 };
@@ -35,6 +37,7 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
+
       if (cartItem) cartItem.quantity = cartItem.quantity + 1;
     },
 
@@ -42,6 +45,7 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
+
       if (cartItem) cartItem.quantity = cartItem.quantity - 1;
     },
 

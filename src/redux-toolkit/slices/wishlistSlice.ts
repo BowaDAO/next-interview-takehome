@@ -5,8 +5,10 @@ type initialStateType = {
   wishlistItems: ProductType[];
 };
 
+const wishlistItemsFromStorage = getDataFromLocalStorage("wishlistItems");
+
 const initialState: initialStateType = {
-  wishlistItems: getDataFromLocalStorage("wishlistItems"),
+  wishlistItems: wishlistItemsFromStorage,
 };
 
 const wishlistSlice = createSlice({

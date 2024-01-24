@@ -36,9 +36,9 @@ const CartItem = ({ product }: { product: ProductType }) => {
         </Box>
 
         <Stack>
-          <Typography>{product.title}</Typography>
+          <Typography variant="h6">{product.title}</Typography>
 
-          <Typography>${product.price}</Typography>
+          <Typography variant="body1">${product.price}</Typography>
         </Stack>
       </Stack>
 
@@ -64,7 +64,7 @@ const CartItem = ({ product }: { product: ProductType }) => {
             -
           </Button>
 
-          <Typography>{product.quantity} </Typography>
+          <Typography variant="h6">{product.quantity}</Typography>
 
           <Button onClick={() => dispatch(incrementProductCount(product.id))}>
             +

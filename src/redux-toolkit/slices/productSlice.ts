@@ -6,8 +6,8 @@ const BASE_URL = `https://dummyjson.com/products`;
 type initialStateType = {
   products: ProductType[];
   status: {
-    fetchAllProductsStatus: "idle" | "loading" | "success" | "failed";
-    fetchProductByIdStatus: "idle" | "loading" | "success" | "failed";
+    fetchAllProducts: "idle" | "loading" | "success" | "failed";
+    fetchProductById: "idle" | "loading" | "success" | "failed";
   };
   error: string | null;
   product: ProductType | null;
@@ -31,10 +31,10 @@ export const fetchProductsList = createAsyncThunk(
           const errorResponse: ErrorResponse = error.response.data;
 
           return rejectWithValue(
-            errorResponse.message || "Something went wrong, please try again"
+            errorResponse.message || "Something went wrong, please try again."
           );
         } else {
-          return rejectWithValue("Something went wrong, please try again");
+          return rejectWithValue("Something went wrong, please try again.");
         }
       });
   }
@@ -56,10 +56,10 @@ export const fetchProductById = createAsyncThunk(
           const errorResponse: ErrorResponse = error.response.data;
 
           return rejectWithValue(
-            errorResponse.message || "Something went wrong, please try again"
+            errorResponse.message || "Something went wrong, please try again."
           );
         } else {
-          return rejectWithValue("Something went wrong, please try again");
+          return rejectWithValue("Something went wrong, please try again.");
         }
       });
   }
@@ -68,8 +68,8 @@ export const fetchProductById = createAsyncThunk(
 const initialState: initialStateType = {
   products: [],
   status: {
-    fetchAllProductsStatus: "idle",
-    fetchProductByIdStatus: "idle",
+    fetchAllProducts: "idle",
+    fetchProductById: "idle",
   },
   error: null,
   product: null,
@@ -82,25 +82,25 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchProductsList.pending, (state, action) => {
-        state.status.fetchAllProductsStatus = "loading";
+        state.status.fetchAllProducts = "loading";
       })
       .addCase(fetchProductsList.fulfilled, (state, action) => {
-        state.status.fetchAllProductsStatus = "success";
+        state.status.fetchAllProducts = "success";
         state.products = action.payload;
       })
       .addCase(fetchProductsList.rejected, (state, action) => {
-        state.status.fetchAllProductsStatus = "failed";
+        state.status.fetchAllProducts = "failed";
         state.error = action.payload as string;
       })
       .addCase(fetchProductById.pending, (state, action) => {
-        state.status.fetchProductByIdStatus = "loading";
+        state.status.fetchProductById = "loading";
       })
       .addCase(fetchProductById.fulfilled, (state, action) => {
-        state.status.fetchProductByIdStatus = "success";
+        state.status.fetchProductById = "success";
         state.product = action.payload;
       })
       .addCase(fetchProductById.rejected, (state, action) => {
-        state.status.fetchProductByIdStatus = "failed";
+        state.status.fetchProductById = "failed";
         state.error = action.payload as string;
       });
   },

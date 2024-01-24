@@ -30,28 +30,29 @@ const FeaturedServices = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "space-between",
 
           "@media (min-width:1024px)": {
             flexDirection: "row",
+            alignItems: "flex-start",
           },
         }}
       >
         <ServiceCard
-          icon={<EasyWinVector />}
+          icon={EasyWinVector}
           heading="Easy Wins"
           subheading="Get your best looking smile now!"
         />
 
         <ServiceCard
-          icon={<ConcreteVector />}
+          icon={ConcreteVector}
           heading="Concrete"
           subheading="Defalcate is most focused in helping you discover your most beautiful smile"
         />
 
         <ServiceCard
-          icon={<HackGrowthVector />}
+          icon={HackGrowthVector}
           heading="Hack Growth"
           subheading="Overcame any hurdle or any other problem."
         />

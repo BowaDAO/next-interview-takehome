@@ -8,15 +8,7 @@ import {
   WhiteCartIcon,
   WhiteHeartIcon,
 } from "@/components/icons/icons";
-import {
-  Box,
-  Button,
-  ButtonBase,
-  Divider,
-  Rating,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Rating, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { addProductToCart } from "@/redux-toolkit/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -52,31 +44,13 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
     >
       <Box sx={{ paddingY: "24px" }}>
         <Stack direction="row" spacing="10px" alignItems="center">
-          <Typography
-            variant="h6"
-            color="#2523B42 "
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="h6" color="text.primary">
             Home
           </Typography>
 
           <ArrowRightIcon />
 
-          <Typography
-            variant="h6"
-            color="#BDBDBD"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              letterSpacing: "0.2px",
-            }}
-          >
+          <Typography variant="h6" color="primary.light">
             Shop
           </Typography>
         </Stack>
@@ -119,7 +93,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
           </Box>
 
           <Stack direction="row" spacing="19px">
-            {product.images.slice(0, 5).map((image, index) => {
+            {product.images?.slice(0, 5).map((image, index) => {
               return (
                 <Box
                   key={index.toString()}
@@ -158,16 +132,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
           }}
         >
           <Box>
-            <Typography
-              variant="h4"
-              color="#252B42"
-              sx={{
-                fontSize: "20px",
-                fontWeight: 400,
-                lineHeight: "30px",
-                letterSpacing: "0.2px",
-              }}
-            >
+            <Typography variant="body1" color="text.primary">
               {product.title}
             </Typography>
 
@@ -179,32 +144,14 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
             >
               <Rating value={product.rating} size="small" />
 
-              <Typography
-                variant="h6"
-                color="#737373"
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  lineHeight: "24px",
-                  letterSpacing: "0.2px",
-                }}
-              >
+              <Typography variant="h6" color="text.secondary">
                 10 Reviews
               </Typography>
             </Stack>
 
             <Stack direction="column" marginTop="22px">
-              <Typography
-                variant="h3"
-                color="#252B42"
-                sx={{
-                  fontSize: "24px",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                  letterSpacing: "0.1px",
-                }}
-              >
-                ${product.price}{" "}
+              <Typography variant="h3" color="text.primary">
+                ${product.price}
               </Typography>
 
               <Stack
@@ -213,29 +160,11 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                 alignItems="center"
                 marginTop="5px"
               >
-                <Typography
-                  variant="h6"
-                  color="#737373"
-                  sx={{
-                    fontSize: "14px",
-                    fontWeight: 700,
-                    lineHeight: "24px",
-                    letterSpacing: "0.2px",
-                  }}
-                >
+                <Typography variant="h6" color="text.secondary">
                   Availability :
                 </Typography>
 
-                <Typography
-                  variant="h6"
-                  color="#23A6F0"
-                  sx={{
-                    fontSize: "14px",
-                    fontWeight: 700,
-                    lineHeight: "24px",
-                    letterSpacing: "0.2px",
-                  }}
-                >
+                <Typography variant="h6" color="secondary.dark">
                   Instock
                 </Typography>
               </Stack>
@@ -272,7 +201,6 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                 <Typography
                   variant="h6"
                   sx={{
-                    fontSize: "14px",
                     textTransform: "capitalize",
                   }}
                 >
@@ -281,7 +209,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
               </Button>
 
               <Stack direction="row" spacing="10px" alignItems="center">
-                <ButtonBase
+                <Button
                   onClick={() => {
                     dispatch(addProductToWishlist(product));
                     toast.success("Product added to wishlist.");
@@ -296,9 +224,9 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                   }}
                 >
                   <WhiteHeartIcon />
-                </ButtonBase>
+                </Button>
 
-                <ButtonBase
+                <Button
                   onClick={() => {
                     dispatch(addProductToCart({ ...product, quantity: 1 }));
                     toast.success("Product added to cart.");
@@ -313,9 +241,9 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                   }}
                 >
                   <WhiteCartIcon />
-                </ButtonBase>
+                </Button>
 
-                <ButtonBase
+                <Button
                   sx={{
                     height: "40px",
                     width: "40px",
@@ -325,7 +253,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                   }}
                 >
                   <VisibilityIcon />
-                </ButtonBase>
+                </Button>
               </Stack>
             </Stack>
           </Box>

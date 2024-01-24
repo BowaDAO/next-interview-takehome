@@ -1,95 +1,43 @@
 import { ListItemButton, List, ListItemText } from "@mui/material";
 import { BlackArrowDown } from "../icons/icons";
 
-const Navlinks = () => {
+type Props = {
+  flexDirection: string;
+};
+
+const Navlinks = (props: Props) => {
   return (
     <List
       sx={{
         display: "flex",
         alignItems: "center",
+        flexDirection: props.flexDirection,
       }}
     >
       <ListItemButton>
-        <ListItemText
-          primary="Home"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+        <ListItemText primary="Home" />
       </ListItemButton>
 
-      <ListItemButton
-        component="a"
-        sx={{ display: "flex", alignItems: "center" }}
-      >
-        <ListItemText
-          primary="Shop"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+      <ListItemButton sx={{ display: "flex", alignItems: "center" }}>
+        <ListItemText primary="Shop" />
 
         <BlackArrowDown />
       </ListItemButton>
 
       <ListItemButton>
-        <ListItemText
-          primary="About"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+        <ListItemText primary="About" />
       </ListItemButton>
 
       <ListItemButton>
-        <ListItemText
-          primary="Blog"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+        <ListItemText primary="Blog" />
       </ListItemButton>
 
       <ListItemButton>
-        <ListItemText
-          primary="Contact"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+        <ListItemText primary="Contact" />
       </ListItemButton>
 
       <ListItemButton>
-        <ListItemText
-          primary="Pages"
-          primaryTypographyProps={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontWeight: 700,
-            letterSpacing: "0.2px",
-            color: "#737373",
-          }}
-        />
+        <ListItemText primary="Pages" />
       </ListItemButton>
     </List>
   );

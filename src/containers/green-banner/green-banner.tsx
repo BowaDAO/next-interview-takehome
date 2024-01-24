@@ -8,7 +8,7 @@ const GreenBanner = () => {
       sx={{
         display: "none",
 
-        "@media (min-width: 1200px)": {
+        "@media(min-width: 1200px)": {
           display: "flex",
           height: "58px",
           paddingX: "24px",
@@ -25,17 +25,7 @@ const GreenBanner = () => {
       </Box>
 
       <Box padding={10}>
-        <Typography
-          component="h6"
-          sx={{
-            fontSize: "14px",
-            fontWeight: "600",
-            lineHeight: "24px",
-            letterSpacing: "0.2px",
-            fontStyle: "normal",
-            color: "#FFF",
-          }}
-        >
+        <Typography variant="h6" color="common.white">
           Follow Us and get a chance to win 80% off
         </Typography>
       </Box>
