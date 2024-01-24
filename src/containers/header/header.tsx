@@ -4,7 +4,12 @@ import { images } from "@/constants";
 
 const Header = () => {
   return (
-    <Box paddingX="10.2%" paddingY="4px">
+    <Box
+      sx={{
+        paddingX: "10.2%",
+        paddingY: "4px",
+      }}
+    >
       {/*Overall Box container */}
 
       <Box

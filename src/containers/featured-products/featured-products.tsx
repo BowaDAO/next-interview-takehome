@@ -34,7 +34,7 @@ const FeaturedProducts = () => {
     <Box
       sx={{
         paddingY: "40px",
-        paddingX: "11%",
+        paddingX: "5%",
         display: "flex",
         flexDirection: "column",
         alignItems: thisIsProductRoute ? "flex-start" : "",
@@ -46,6 +46,7 @@ const FeaturedProducts = () => {
 
         "@media (min-width: 1024px)": {
           paddingY: "80px",
+          paddingX: "11%",
         },
       }}
     >

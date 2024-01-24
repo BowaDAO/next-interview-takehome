@@ -5,9 +5,13 @@ const ProductPageBody = ({ product }: { product: ProductType }) => {
   return (
     <Box
       sx={{
-        paddingX: "11%",
+        paddingX: "5%",
         display: "flex",
         flexDirection: "column",
+
+        "@media (min-width: 768px)": {
+          paddingX: "11%",
+        },
       }}
     >
       <Stack
