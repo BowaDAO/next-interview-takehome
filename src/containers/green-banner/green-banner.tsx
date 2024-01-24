@@ -12,7 +12,7 @@ const GreenBanner = () => {
           display: "flex",
           height: "58px",
           paddingX: "24px",
-          bgcolor: "#23856D",
+          bgcolor: "secondary.main",
           alignItems: "center",
           justifyContent: "space-between",
         },

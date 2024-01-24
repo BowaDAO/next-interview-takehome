@@ -7,13 +7,17 @@ const FeaturedPosts = () => {
     <Box
       component="section"
       sx={{
-        paddingY: "80px",
+        paddingY: "40px",
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         gap: "32px",
+
+        "@media (min-width: 1024px)": {
+          paddingY: "80px",
+        },
       }}
     >
       <Stack alignItems="center" spacing="10px">
@@ -21,7 +25,7 @@ const FeaturedPosts = () => {
           Practice Advice
         </Typography>
 
-        <Typography variant="h1" color="text.primary">
+        <Typography variant="h3" color="text.primary">
           Featured Posts
         </Typography>
       </Stack>

@@ -9,7 +9,7 @@ const Header = () => {
 
       <Box
         sx={{
-          paddingY: "80px",
+          paddingY: "40px",
           display: "flex",
           flexDirection: "column",
           gap: "16px",
@@ -17,6 +17,7 @@ const Header = () => {
 
           "@media (min-width: 1024px)": {
             flexDirection: "row",
+            paddingY: "80px",
           },
         }}
       >

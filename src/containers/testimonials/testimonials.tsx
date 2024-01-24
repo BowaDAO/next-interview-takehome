@@ -8,7 +8,7 @@ const Testimonials = () => {
     <Box
       component="section"
       sx={{
-        paddingY: "80px",
+        paddingY: "40px",
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
@@ -16,6 +16,7 @@ const Testimonials = () => {
         alignItems: "center",
 
         "@media(min-width: 1024px)": {
+          paddingY: "80px",
           flexDirection: "row",
           justifyContent: "space-between",
           gap: 0,

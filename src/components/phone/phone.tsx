@@ -3,13 +3,7 @@ import { PhoneIcon } from "../icons/icons";
 
 const Phone = () => {
   return (
-    <Box
-      component="div"
-      display="flex"
-      alignItems="center"
-      gap="5px"
-      padding="10px"
-    >
+    <Box display="flex" alignItems="center" gap="5px" padding="10px">
       <PhoneIcon />
 
       <Typography variant="h6" color="common.white">

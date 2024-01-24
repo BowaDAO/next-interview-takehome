@@ -10,7 +10,6 @@ const Login = () => {
         variant="h6"
         color="secondary.dark"
         sx={{
-          color: "#23A6F0",
           textTransform: "capitalize",
         }}
       >

@@ -11,13 +11,17 @@ const FeaturedServices = () => {
     <Box
       component="section"
       sx={{
-        paddingY: "80px",
+        paddingY: "40px",
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         gap: "32px",
+
+        "@media (min-width: 1024px)": {
+          paddingY: "80px",
+        },
       }}
     >
       <SectionHeading
@@ -31,11 +35,11 @@ const FeaturedServices = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "space-between",
 
           "@media (min-width:1024px)": {
             flexDirection: "row",
             alignItems: "flex-start",
+            justifyContent: "space-between",
           },
         }}
       >

@@ -27,6 +27,7 @@ const CallToAction = () => {
         width="571px"
         spacing="30px"
         alignItems="center"
+        paddingX="11%"
       >
         <Typography variant="h6" color="secondary.dark">
           Designing Better Experience

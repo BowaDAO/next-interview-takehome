@@ -58,8 +58,8 @@ const theme = createTheme({
     },
 
     h3: {
-      fontSize: "14px",
-      lineHeight: "24px",
+      fontSize: "20px",
+      lineHeight: "28px",
       fontWeight: 700,
       letterSpacing: "0.1px",
 

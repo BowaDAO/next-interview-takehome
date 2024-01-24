@@ -29,7 +29,7 @@ const NavigationBar = () => {
       <AppBar
         position="static"
         elevation={0}
-        style={{ backgroundColor: "#FFF" }}
+        sx={{ backgroundColor: "common.white" }}
       >
         {/* PC Navbar */}
 

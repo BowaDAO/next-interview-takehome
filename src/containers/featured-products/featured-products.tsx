@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
   return (
     <Box
       sx={{
-        paddingY: "80px",
+        paddingY: "40px",
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
@@ -43,6 +43,10 @@ const FeaturedProducts = () => {
         backgroundColor: thisIsProductRoute
           ? "secondary.light"
           : "common.white",
+
+        "@media (min-width: 1024px)": {
+          paddingY: "80px",
+        },
       }}
     >
       <>

@@ -39,7 +39,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
         paddingX: "11%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "#FAFAFA",
+        backgroundColor: "secondary.light",
       }}
     >
       <Box sx={{ paddingY: "24px" }}>
@@ -188,7 +188,19 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
               <BlackEllipse />
             </Stack>
 
-            <Stack marginTop="67px" direction="row" spacing="10px">
+            <Box
+              sx={{
+                marginTop: "67px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "30px",
+
+                "@media (min-width: 1024px)": {
+                  flexDirection: "row",
+                  gap: "10px",
+                },
+              }}
+            >
               <Button
                 variant="contained"
                 color="info"
@@ -255,7 +267,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
                   <VisibilityIcon />
                 </Button>
               </Stack>
-            </Stack>
+            </Box>
           </Box>
         </Box>
       </Box>

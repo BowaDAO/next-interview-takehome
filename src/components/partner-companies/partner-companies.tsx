@@ -7,10 +7,15 @@ const PartnerCompanies = () => {
         paddingX: "11%",
         paddingY: "50px",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-evenly",
-        backgroundColor: "#FAFAFA",
+        backgroundColor: "secondary.light",
+        gap: "50px",
+
+        "@media (min-width: 1024px)": {
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+        },
       }}
     >
       {/* Hooli */}
