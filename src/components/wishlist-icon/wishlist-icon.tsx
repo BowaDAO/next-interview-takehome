@@ -31,8 +31,7 @@ const WishlistIcon = () => {
     <>
       <Badge
         badgeContent={wishlistItems?.length > 0 && wishlistItems.length}
-        color="default"
-        style={{
+        sx={{
           color: "secondary.dark",
           width: "56px",
           height: "46px",

@@ -11,7 +11,6 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         sx={{
           height: "238px",
           position: "relative",
-          display: "block",
           width: "100%",
           cursor: "pointer",
         }}

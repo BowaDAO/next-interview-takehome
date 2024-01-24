@@ -78,6 +78,10 @@ const FeaturedProducts = () => {
                       sx={{
                         height: "400px",
                         width: "100%",
+
+                        "@media (min-width: 1024px)": {
+                          width: "183px",
+                        },
                       }}
                     />
                   </Grid>
