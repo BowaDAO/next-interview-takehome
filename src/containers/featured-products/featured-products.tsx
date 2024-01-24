@@ -116,7 +116,7 @@ const FeaturedProducts = () => {
             <Button
               variant="outlined"
               color="info"
-              sx={{ paddingX: "40px", paddingY: "15px" }}
+              sx={{ paddingX: "40px", paddingY: "15px", alignSelf: "center" }}
               onClick={() => setPage((page) => page + 1)}
             >
               <Typography variant="h6" color="secondary.dark">
