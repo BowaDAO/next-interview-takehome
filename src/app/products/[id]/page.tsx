@@ -6,12 +6,7 @@ import { fetchProductById } from "@/redux-toolkit/slices/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { DispatchType, StateType } from "@/redux-toolkit/store";
 import { useEffect } from "react";
-import {
-  ProductPageHeader,
-  ProductPageBody,
-  FeaturedProducts,
-} from "@/containers";
-import { PartnerCompanies } from "@/components";
+import { ProductPageHeader, ProductPageBody } from "@/containers";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -53,10 +48,6 @@ const ProductPage = () => {
               <ProductPageHeader product={product} />
 
               <ProductPageBody product={product} />
-
-              <FeaturedProducts />
-
-              <PartnerCompanies />
             </Box>
           )}
         </>
