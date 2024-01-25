@@ -6,6 +6,7 @@ import {
   CartIcon,
   WishlistIcon,
 } from "@/components";
+import { NavtoggleIcon } from "@/components/icons/icons";
 import {
   AppBar,
   Toolbar,
@@ -85,23 +86,27 @@ const NavigationBar = () => {
         >
           <Logo />
 
-          <Button variant="outlined" color="info" onClick={openDrawer}>
-            Open
-          </Button>
+          <IconButton onClick={openDrawer}>
+            <NavtoggleIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
 
       {/* Drawer */}
 
       <Drawer variant="persistent" anchor="top" open={drawerIsOpen}>
-        <Box alignSelf="flex-end" padding="5px">
-          <IconButton onClick={closeDrawer}>Close</IconButton>
+        <Box alignSelf="flex-end" padding="15px">
+          <IconButton onClick={closeDrawer}>
+            <NavtoggleIcon />
+          </IconButton>
         </Box>
 
         <Box paddingBottom="24px">
           <Navlinks flexDirection="column" />
 
           <Stack alignItems="center">
+            <Login />
+
             <SearchIcon />
 
             <CartIcon />

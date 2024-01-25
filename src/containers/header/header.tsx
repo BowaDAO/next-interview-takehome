@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Box
       sx={{
-        paddingX: "10.2%",
+        paddingX: "10%",
         paddingY: "4px",
       }}
     >
@@ -14,7 +14,7 @@ const Header = () => {
 
       <Box
         sx={{
-          paddingY: "40px",
+          paddingY: "24px",
           display: "flex",
           flexDirection: "column",
           gap: "16px",

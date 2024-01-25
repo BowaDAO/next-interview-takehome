@@ -39,15 +39,10 @@ const theme = createTheme({
 
   typography: {
     h1: {
-      fontSize: "32px",
+      fontSize: "40px",
       fontWeight: 700,
-      lineHeight: "42px",
+      lineHeight: "50px",
       letterSpacing: "0.2px",
-
-      "@media (min-width: 960px)": {
-        fontSize: "40px",
-        lineHeight: "50px",
-      },
     },
 
     h2: {
@@ -58,16 +53,10 @@ const theme = createTheme({
     },
 
     h3: {
-      fontSize: "20px",
-      lineHeight: "28px",
+      fontSize: "24px",
+      lineHeight: "32px",
       fontWeight: 700,
       letterSpacing: "0.1px",
-
-      "@media (min-width: 960px)": {
-        fontSize: "24px",
-
-        lineHeight: "32px",
-      },
     },
 
     h4: {
@@ -106,13 +95,8 @@ const theme = createTheme({
     body2: {
       fontSize: "12px",
       fontWeight: 400,
-      lineHeight: "16px",
+      lineHeight: "20px",
       letterSpacing: "0.2px",
-
-      "@media (min-width: 960px)": {
-        fontSize: "14px",
-        lineHeight: "20px",
-      },
     },
   },
 

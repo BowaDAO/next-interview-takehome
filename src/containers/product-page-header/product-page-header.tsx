@@ -36,7 +36,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
   return (
     <Box
       sx={{
-        paddingX: "5%",
+        paddingX: "8%",
         display: "flex",
         flexDirection: "column",
         backgroundColor: "secondary.light",
@@ -46,7 +46,16 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
         },
       }}
     >
-      <Box sx={{ paddingY: "24px" }}>
+      <Box
+        sx={{
+          paddingY: "24px",
+          alignSelf: "center",
+
+          "@media (min-width: 768px)": {
+            alignSelf: "flex-start",
+          },
+        }}
+      >
         <Stack direction="row" spacing="10px" alignItems="center">
           <Typography variant="h6" color="text.primary">
             Home
@@ -88,7 +97,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
           <Box
             sx={{
               position: "relative",
-              height: "372px",
+              height: "348px",
 
               "@media (min-width: 768px)": {
                 height: "450px",

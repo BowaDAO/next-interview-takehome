@@ -24,7 +24,7 @@ const Footer = () => {
     >
       <Box
         sx={{
-          paddingX: "5%",
+          paddingX: "11%",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
@@ -32,10 +32,6 @@ const Footer = () => {
           width: "100%",
           paddingY: "40px",
           backgroundColor: thisIsHomeRoute ? "secondary.light" : "common.white",
-
-          "@media (min-width: 600px)": {
-            paddingX: "11%",
-          },
 
           "@media (min-width: 1024px)": {
             flexDirection: "row",
@@ -57,21 +53,18 @@ const Footer = () => {
 
       <Box
         sx={{
-          marginY: "50px",
-          paddingX: "5%",
+          marginY: "70px",
+          paddingX: "11%",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
           width: "100%",
           gap: "30px",
 
-          "@media (min-width: 600px)": {
-            paddingX: "11%",
-          },
-
           "@media (min-width: 1024px)": {
             flexDirection: "row",
             justifyContent: "space-between",
+            marginY: "50px",
             gap: 0,
           },
         }}

@@ -25,7 +25,7 @@ const FeaturedPosts = () => {
           Practice Advice
         </Typography>
 
-        <Typography variant="h3" color="text.primary">
+        <Typography variant="h1" color="text.primary">
           Featured Posts
         </Typography>
       </Stack>

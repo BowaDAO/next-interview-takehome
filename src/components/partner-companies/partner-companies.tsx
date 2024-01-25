@@ -10,7 +10,7 @@ const PartnerCompanies = () => {
         flexDirection: "column",
         alignItems: "center",
         backgroundColor: "secondary.light",
-        gap: "50px",
+        gap: "60px",
 
         "@media (min-width: 1024px)": {
           flexDirection: "row",

@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      {children}
+      <div style={{ minHeight: "100vh" }}>{children}</div>
 
       <FeaturedProducts />
 
