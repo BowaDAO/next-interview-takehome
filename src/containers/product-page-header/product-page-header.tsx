@@ -164,7 +164,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
               alignItems="center"
               marginTop="12px"
             >
-              <Rating value={product.rating} size="small" />
+              <Rating value={product.rating} size="small" readOnly />
 
               <Typography variant="h6" color="text.secondary">
                 10 Reviews

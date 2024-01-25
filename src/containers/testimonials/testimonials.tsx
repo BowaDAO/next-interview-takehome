@@ -44,17 +44,24 @@ const Testimonials = () => {
           },
         }}
       >
-        <ImageList cols={3} gap={17}>
+        <ImageList cols={3}>
           {testimonialImagesData.map((item) => {
             return (
-              <ImageListItem key={item.id}>
+              <ImageListItem
+                key={item.id}
+                sx={{
+                  marginY: "1px",
+
+                  "@media(min-width: 960px)": { marginY: "4px" },
+                }}
+              >
                 <Box
                   sx={{
                     position: "relative",
                     height: "112px",
                     width: "112px",
 
-                    "@media(min-width: 768px)": {
+                    "@media(min-width: 960px)": {
                       height: "143px",
                       width: "143px",
                     },

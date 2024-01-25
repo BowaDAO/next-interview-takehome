@@ -35,7 +35,7 @@ const TestimonialMessage = () => {
           />
         </Box>
 
-        <Rating value={4} />
+        <Rating value={4} readOnly />
 
         <Typography variant="h6" color="text.secondary">
           Slate helps you see how many more days you need to work to reach your
