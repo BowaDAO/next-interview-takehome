@@ -192,7 +192,7 @@ const ProductPageHeader = ({ product }: { product: ProductType }) => {
               </Stack>
             </Stack>
 
-            <Typography variant="body1" marginTop="32px">
+            <Typography variant="body2" marginTop="32px">
               {product.description}
             </Typography>
           </Box>
