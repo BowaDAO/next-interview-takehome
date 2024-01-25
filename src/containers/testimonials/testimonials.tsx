@@ -37,8 +37,6 @@ const Testimonials = () => {
 
       <Stack
         sx={{
-          width: "100%",
-
           "@media(min-width: 1024px)": {
             width: "45%",
           },
