@@ -26,7 +26,7 @@ const CallToAction = () => {
         marginBottom="112px"
         spacing="30px"
         alignItems="center"
-        paddingX="11%"
+        paddingX="7%"
       >
         <Typography variant="h6" color="secondary.dark">
           Designing Better Experience
@@ -36,7 +36,7 @@ const CallToAction = () => {
           Problems trying to resolve the conflict between
         </Typography>
 
-        <Typography variant="body2" color="text.secondary" maxWidth="447px">
+        <Typography variant="body2" color="text.secondary">
           Problems trying to resolve the conflict between the two major realms
           of Classical physics:
         </Typography>
