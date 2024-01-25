@@ -24,7 +24,6 @@ const CallToAction = () => {
       <Stack
         marginTop="160px"
         marginBottom="112px"
-        width="571px"
         spacing="30px"
         alignItems="center"
         paddingX="11%"
